@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.d2l_msdproject.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_appMainFragment"
+            app:destination="@id/appMainFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/loginFragment"-->
+<!--        android:name="com.example.dynamicgroceryapp.ui.login.LoginFragment"-->
+<!--        android:label="fragment_login"-->
+<!--        tools:layout="@layout/fragment_login" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginFragment_to_signUpFragment"-->
+<!--            app:destination="@id/signUpFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginFragment_to_accountRecoveryFragment"-->
+<!--            app:destination="@id/accountRecoveryFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_loginFragment_to_appMainFragment"-->
+<!--            app:destination="@id/appMainFragment"-->
+<!--            app:popUpTo="@id/loginFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/appMainFragment"
+        android:name="com.example.d2l_msdproject.ui.appMainFragment"
+        android:label="fragment_app_main"
+        tools:layout="@layout/fragment_app_main" />
+</resources>
