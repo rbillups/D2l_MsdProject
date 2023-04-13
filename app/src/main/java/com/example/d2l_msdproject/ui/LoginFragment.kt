@@ -31,17 +31,17 @@ class LoginFragment : Fragment() {
         val email = binding.loginEmail
         val password = binding.loginPassword
 
-        //Listener for create account button. Sends user to registration page.
-        binding.createAccountButton.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_loginFragment_to_signUpFragment)
-        }
-
-        //Listener for forgot password. Sends user to recovery page.
-        binding.forgotPassword.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_loginFragment_to_accountRecoveryFragment)
-        }
+//        //Listener for create account button. Sends user to registration page.
+//        binding.createAccountButton.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_loginFragment_to_signUpFragment)
+//        }
+//
+//        //Listener for forgot password. Sends user to recovery page.
+//        binding.forgotPassword.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_loginFragment_to_accountRecoveryFragment)
+//        }
 
         //Listener for sign in button.
         binding.signInButton.setOnClickListener {
