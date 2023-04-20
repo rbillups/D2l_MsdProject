@@ -8,4 +8,11 @@
     <string name="sign_in">"   Sign In   "</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="username">Username</string>
+    <string name="new_password">New Password</string>
+    <string name="phone_number">Phone</string>
+    <string name="phone">Phone</string>
+    <string name="updateInformation">Update Information</string>
+    <string name="logout">Logout</string>
+    <string name="changeImage">Change Image</string>
 </resources>

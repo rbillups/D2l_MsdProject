@@ -8,63 +8,34 @@
     android:paddingLeft="@dimen/fragment_horizontal_margin"
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
-    android:paddingBottom="@dimen/fragment_vertical_margin"
-    tools:context=".ui.LoginFragment">
+    android:paddingBottom="@dimen/fragment_vertical_margin">
+<!--    tools:context=".ui.LoginFragment"-->
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226" />
-<!--    android:src="@drawable/"-->
+        app:layout_constraintVertical_bias="0.226"
+        android:src="@drawable/LOGO"/>
 
-
-
-    <Button
-        android:id="@+id/createAccountButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/material_dynamic_neutral50"
-        android:text="@string/createaccount"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginPassword"/>
 
     <Button
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
         android:background="@color/material_dynamic_neutral50"
         android:text="@string/sign_in"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/createAccountButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginPassword"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/forgotPassword"
-        android:layout_width="156dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/clear"
-        android:color="@color/white"
-        android:text="@string/forgot_password"
-        android:textColor="@color/blue_700"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signInButton"/>
+        app:layout_constraintTop_toBottomOf="@id/loginPassword" />
 
     <EditText
         android:id="@+id/loginEmail"

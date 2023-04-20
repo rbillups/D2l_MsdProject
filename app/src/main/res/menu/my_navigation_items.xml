@@ -7,8 +7,8 @@
 <!--        android:icon="@drawable/"-->
     <item
         android:id="@+id/groupBottomNav"
-        android:title="@string/learning_modules"/>
-<!--        android:icon="@drawable/"-->
+        android:title="@string/learning_modules"
+        android:icon="@drawable/learning"/>
 
     <item
         android:id="@+id/profileBottomNav"
