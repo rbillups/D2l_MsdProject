@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/listBottomNav"
+        android:id="@+id/startHereBottomNav"
         android:title="@string/start_here"/>
 <!--        android:icon="@drawable/"-->
     <item
-        android:id="@+id/groupBottomNav"
+        android:id="@+id/learningModBottomNav"
         android:title="@string/learning_modules"
         android:icon="@drawable/learning"/>
 

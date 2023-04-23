@@ -15,4 +15,22 @@
     <string name="updateInformation">Update Information</string>
     <string name="logout">Logout</string>
     <string name="changeImage">Change Image</string>
+    <string name="Lesson">Lesson</string>
+    <string name="slides">Slides</string>
+    <string name="lab">Lab</string>
+
+    <string name="lesson1">L1: Course Intro &amp; Kotlin Basics V</string>
+    <string name="lesson2">L2: Functions</string>
+    <string name="lesson3">L3: Class and Objects</string>
+    <string name="lesson4">L4: Build your first Android app v</string>
+    <string name="lesson5">L5: Layouts</string>
+    <string name="lesson6">L6: App Navigation</string>
+    <string name="lesson7">L7: Activity and Fragment Lifecycle</string>
+    <string name="lesson8">L8: App Architecture (UI Layer)</string>
+    <string name="lesson9">L9: App Architecture (Persistence Layer)</string>
+    <string name="lesson10">L10: Advanced RecyclerView use cases</string>
+    <string name="lesson11">L11: Connect to the Internet</string>
+    <string name="lesson12">L12: Repository pattern and WorkManager</string>
+    <string name="lesson13">L13: App UI Design</string>
+    <string name="string_msd">Mobile Software Development Section 02</string>
 </resources>

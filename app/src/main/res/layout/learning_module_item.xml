@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Main Header TextView -->
+        <TextView
+            android:id="@+id/lessonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lesson"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- First Sub-section TextView -->
+        <TextView
+            android:id="@+id/subSection1TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/slides"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:paddingStart="32dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:clickable="true"
+            android:paddingBottom="8dp" />
+
+        <!-- Second Sub-section TextView -->
+        <TextView
+            android:id="@+id/subSection2TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lab"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:paddingStart="32dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:clickable="true"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
