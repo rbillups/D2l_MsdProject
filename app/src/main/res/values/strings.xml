@@ -18,6 +18,10 @@
     <string name="Lesson">Lesson</string>
     <string name="slides">Slides</string>
     <string name="lab">Lab</string>
+    <string name="string_msd">Mobile Software Development Section 02</string>
+    <string name="sectionTitle">sectionTitle</string>
+    <string name="fileName">fileName</string>
+
 
     <string name="lesson1">L1: Course Intro &amp; Kotlin Basics V</string>
     <string name="lesson2">L2: Functions</string>
@@ -32,5 +36,17 @@
     <string name="lesson11">L11: Connect to the Internet</string>
     <string name="lesson12">L12: Repository pattern and WorkManager</string>
     <string name="lesson13">L13: App UI Design</string>
-    <string name="string_msd">Mobile Software Development Section 02</string>
+
+<!--    Start Here Section Titles & File Names -->
+    <string name="section1">Welcome</string>
+    <string name="section2">Syllabus</string>
+    <string name="section3">Lab Report Instruction</string>
+    <string name="section4">Project Instructions</string>
+    <string name="section5">Project Proposal</string>
+    <string name="section1Description">Welcome to the class</string>
+    <string name="section2Description">CS_4322_2_Sp_23_Syllabus</string>
+    <string name="section3Description">Lab Report Instruction</string>
+    <string name="section4Description">Project_Instruction</string>
+    <string name="section5Description">Project_Proposal</string>
+
 </resources>
