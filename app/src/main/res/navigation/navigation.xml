@@ -3,9 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/appMainFragment">
+    app:startDestination="@id/loginFragment">
 
-
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.d2l_msdproject.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_appMainFragment"
+            app:destination="@id/appMainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/appMainFragment"
         android:name="com.example.d2l_msdproject.ui.appMainFragment"
