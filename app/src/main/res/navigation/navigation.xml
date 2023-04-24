@@ -10,5 +10,14 @@
         android:id="@+id/appMainFragment"
         android:name="com.example.d2l_msdproject.ui.appMainFragment"
         android:label="fragment_app_main"
-        tools:layout="@layout/fragment_app_main" />
+        tools:layout="@layout/fragment_app_main" >
+        <action
+            android:id="@+id/action_appMainFragment_to_webViewModule"
+            app:destination="@id/webViewModule" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewModule"
+        android:name="com.example.d2l_msdproject.ui.webViewModule"
+        android:label="fragment_web_view_module"
+        tools:layout="@layout/fragment_web_view_module" />
 </navigation>

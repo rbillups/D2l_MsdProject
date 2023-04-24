@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,11 +32,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    dataBinding {
-        enabled = true
+    dataBinding{
+        enabled=true
     }
     buildFeatures {
         viewBinding true
+        dataBinding = true
     }
 }
 
@@ -56,7 +58,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
     implementation 'com.google.firebase:firebase-database:20.0.4'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
-
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     // Import the BoM for the Firebase platform

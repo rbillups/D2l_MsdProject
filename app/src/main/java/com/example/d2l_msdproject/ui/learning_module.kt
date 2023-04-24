@@ -45,6 +45,8 @@ class learning_module : Fragment() {
         //load recyclerview
         setUpModules()
 
+
+
         return binding.root
     }
 
