@@ -48,7 +48,7 @@ class appMainFragment : Fragment() {
             when (menuItem.itemId) {
                 R.id.startHereBottomNav -> viewPager.currentItem = 0
                 R.id.learningModBottomNav -> viewPager.currentItem = 1
-                R.id.profileBottomNav -> viewPager.currentItem=2
+//                R.id.profileBottomNav -> viewPager.currentItem=2
             }
             true
         }

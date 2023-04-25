@@ -54,48 +54,78 @@ class webViewModule : Fragment() {
         val bundle = arguments
 
         val booleanSlides= bundle?.getBoolean("Slides?")
+        val booleanStart= bundle?.getBoolean("startHere?")
         var slidesOrLab=""
         if (bundle != null) {
-            // Retrieve the data from the bundle using the key
             val lessonNum = bundle.getInt("itemNum").toString()
             Log.v("TAG", "$lessonNum")
 
             val webView: WebView = binding.webView
+            // Retrieve the data from the bundle using the key
+            if(booleanStart==true){
+                val path = FirebaseDatabase.getInstance().getReference("Files/$lessonNum")
+                path.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        // this method is called to get the real-time updates in the data.
+                        // this method is called when the data is changed in our Firebase console.
+                        // below line is for getting the data from snapshot of our database.
+                        val webUrl = snapshot.getValue(String::class.java)
 
-            if(booleanSlides==true){
-                slidesOrLab="Slides"
-            }else{
-                slidesOrLab="Lab"
-            }
-
-            val lessonPath = FirebaseDatabase.getInstance().getReference("Urls/$lessonNum/$slidesOrLab")
-
-            // calling addValueEventListener method for getting the values from database.
-            lessonPath.addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    // this method is called to get the real-time updates in the data.
-                    // this method is called when the data is changed in our Firebase console.
-                    // below line is for getting the data from snapshot of our database.
-                    val webUrl = snapshot.getValue(String::class.java)
-
-                    // after getting the value for our WebView URL we are
-                    // setting our value to our WebView view in the below lines.
-                    if (webUrl != null) {
-                        webView.loadUrl(webUrl)
-                        Log.v("TAG", "$webUrl")
-                    }else{
-                        Log.v("TAG", "Not happin")
+                        // after getting the value for our WebView URL we are
+                        // setting our value to our WebView view in the below lines.
+                        if (webUrl != null) {
+                            webView.loadUrl(webUrl)
+                            Log.v("TAG", "$webUrl")
+                        } else {
+                            Log.v("TAG", "Not happin")
+                        }
+                        webView.settings.javaScriptEnabled = true
+                        webView.webViewClient = WebViewClient()
                     }
-                    webView.settings.javaScriptEnabled = true
-                    webView.webViewClient = WebViewClient()
+
+                    override fun onCancelled(error: DatabaseError) {
+                        // calling onCancelled method when we receive
+                        // any error or we are not able to get the data.
+                        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
+            else {
+                if (booleanSlides == true) {
+                    slidesOrLab = "Slides"
+                } else {
+                    slidesOrLab = "Lab"
                 }
 
-                override fun onCancelled(error: DatabaseError) {
-                    // calling onCancelled method when we receive
-                    // any error or we are not able to get the data.
-                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
-                }
-            })
+                val lessonPath =
+                    FirebaseDatabase.getInstance().getReference("Urls/$lessonNum/$slidesOrLab")
+                // calling addValueEventListener method for getting the values from database.
+                lessonPath.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        // this method is called to get the real-time updates in the data.
+                        // this method is called when the data is changed in our Firebase console.
+                        // below line is for getting the data from snapshot of our database.
+                        val webUrl = snapshot.getValue(String::class.java)
+
+                        // after getting the value for our WebView URL we are
+                        // setting our value to our WebView view in the below lines.
+                        if (webUrl != null) {
+                            webView.loadUrl(webUrl)
+                            Log.v("TAG", "$webUrl")
+                        } else {
+                            Log.v("TAG", "Not happin")
+                        }
+                        webView.settings.javaScriptEnabled = true
+                        webView.webViewClient = WebViewClient()
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        // calling onCancelled method when we receive
+                        // any error or we are not able to get the data.
+                        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
         }else{
             Log.v("TAG", "Not happin twin")
         }
@@ -105,10 +135,10 @@ class webViewModule : Fragment() {
     }
 
 }
-    /*@BindingAdapter("app:url")
-    fun setWebViewUrl(webView: WebView, url: String?) {
-        if (url != null) {
-            webView.loadUrl(url)
-        }
-    }*/
+/*@BindingAdapter("app:url")
+fun setWebViewUrl(webView: WebView, url: String?) {
+    if (url != null) {
+        webView.loadUrl(url)
+    }
+}*/
 

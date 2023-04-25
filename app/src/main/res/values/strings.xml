@@ -37,7 +37,7 @@
     <string name="lesson12">L12: Repository pattern and WorkManager</string>
     <string name="lesson13">L13: App UI Design</string>
 
-<!--    Start Here Section Titles & File Names -->
+    <!--    Start Here Section Titles & File Names -->
     <string name="section1">Welcome</string>
     <string name="section2">Syllabus</string>
     <string name="section3">Lab Report Instruction</string>

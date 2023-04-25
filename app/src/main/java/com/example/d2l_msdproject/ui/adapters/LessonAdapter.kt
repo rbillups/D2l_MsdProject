@@ -35,6 +35,7 @@ class LessonAdapter(private val context: Context, private val lessons: List<Modu
 
         // Put the data in the bundle, with a key-value pair
         bundle.putInt("itemNum", position+1)
+        bundle.putBoolean("startHere?", false)
         // Set click listener on subSection1TextView
 
         holder.subSection1TextView.setOnClickListener {

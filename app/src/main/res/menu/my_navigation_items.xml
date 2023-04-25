@@ -3,16 +3,16 @@
 
     <item
         android:id="@+id/startHereBottomNav"
-        android:title="@string/start_here"/>
-<!--        android:icon="@drawable/"-->
+        android:title="@string/start_here"
+        android:icon="@drawable/starthere"/>
     <item
         android:id="@+id/learningModBottomNav"
         android:title="@string/learning_modules"
         android:icon="@drawable/learning"/>
 
-    <item
-        android:id="@+id/profileBottomNav"
-        android:title="@string/profile"
-        android:icon="@drawable/profile"/>
+<!--    <item-->
+<!--        android:id="@+id/profileBottomNav"-->
+<!--        android:title="@string/profile"-->
+<!--        android:icon="@drawable/profile"/>-->
 
 </menu>
